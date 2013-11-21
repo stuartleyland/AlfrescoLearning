@@ -19,10 +19,22 @@
 	<!-- Introduction of new namespaces defined by this model -->
 	<namespaces>
 		<namespace uri="http://www.ixxus.co.uk/model/secondproject/1.0" prefix="sp" />
-	</namespaces>
+	</namespaces>		
 
 	<constraints />
 	<types>
+		<type name="sp:doc">
+			<title>Standard Document</title>
+			<parent>cm:content</parent>
+		</type>
+		<type name="sp:marketingDoc">
+			<title>Marketing Document</title>
+			<parent>sp:doc</parent>
+		</type>
+		<type name="sp:whitepaper">
+			<title>Whitepaper</title>
+			<parent>sp:whitepaper</parent>
+		</type>	
 		<type name="sp:sampleType">
 			<title>Sample Type</title>
 			<parent>cm:content</parent>
