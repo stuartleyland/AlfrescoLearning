@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC '-//SPRING//DTD BEAN//EN' 'http://www.springframework.org/dtd/spring-beans.dtd'>
+<beans>
+
+    <!-- Bootstrap -->
+    <bean id="com.ixxus.stu.secondproject_dictionaryBootstrap" parent="dictionaryModelBootstrap" depends-on="dictionaryBootstrap">
+        <property name="models">
+            <list>
+                <value>alfresco/module/secondproject/model/content-model.xml</value>
+            </list>
+        </property>
+    </bean>
+    
+    <bean id="webscript.com.ixxus.stu.sampleWebScript.get" class="com.ixxus.stu.SampleWebScript" parent="webscript"/>
+    
+    <bean id="webscript.com.ixxus.stu.allfiles.get" class="com.ixxus.stu.AllFilesWebScript" parent="webscript">
+    	<constructor-arg index="0" ref="SearchService"/>
+    </bean>
+
+</beans>

@@ -1,0 +1,7 @@
+<webscript>
+	<shortname>List all files</shortname>
+	<url>/files/all</url>
+	<authentication>user</authentication>
+	<transaction allow="readonly"/>
+	<format default="json">argument</format>
+</webscript>
