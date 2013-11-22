@@ -114,6 +114,7 @@
 			</properties>
 		</aspect>
 		<aspect name="sp:clientRelated">
+			<title>Client Related Document</title>
 			<properties>
 				<property name="sp:clientName">
 					<type>d:text</type>

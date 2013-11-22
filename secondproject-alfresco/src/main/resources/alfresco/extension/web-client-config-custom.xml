@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <alfresco-config>
 
 	<!-- Aspects -->
@@ -30,4 +29,42 @@
 			<show-property name="sp:campaign" display-label-id="campaign" />
 		</property-sheet>
 	</config>
+	
+	<!-- Content list -->
+	<config evaluator="string-compare" condition="Content Wizards">
+		<content-types>
+			<type name="sp:doc" />
+			<type name="sp:whitepaper" />
+			<type name="sp:legalDoc" />
+			<type name="sp:marketingDoc" />
+			<type name="sp:hrDoc" />
+			<type name="sp:salesDoc" />
+			<type name="sp:opsDoc" />
+		</content-types>
+	</config>
+	<config evaluator="string-compare" condition="Action Wizards">
+		<aspects>
+			<aspect name="sp:webable" />
+			<aspect name="sp:clientRelated" />
+		</aspects>
+		<subtypes>
+			<type name="sp:doc" />
+			<type name="sp:whitepaper" />
+			<type name="sp:legalDoc" />
+			<type name="sp:marketingDoc" />
+			<type name="sp:hrDoc" />
+			<type name="sp:salesDoc" />
+			<type name="sp:opsDoc" />
+		</subtypes>
+		<specialise-types>
+			<type name="sp:doc" />
+			<type name="sp:whitepaper" />
+			<type name="sp:legalDoc" />
+			<type name="sp:marketingDoc" />
+			<type name="sp:hrDoc" />
+			<type name="sp:salesDoc" />
+			<type name="sp:opsDoc" />
+		</specialise-types>
+	</config>
+	
 </alfresco-config>
