@@ -67,4 +67,24 @@
 		</specialise-types>
 	</config>
 	
+	<!-- Advanced search -->
+	<config evaluator="string-compare" condition="Advanced Search">
+		<advanced-search>
+			<content-types>
+				<type name="sp:doc" />
+				<type name="sp:whitepaper" />
+				<type name="sp:legalDoc" />
+				<type name="sp:marketingDoc" />
+				<type name="sp:hrDoc" />
+				<type name="sp:salesDoc" />
+				<type name="sp:opsDoc" />
+			</content-types>
+			<custom-properties>
+				<meta-data aspect="sp:webable" property="sp:published" display-label-id="published" />
+				<meta-data aspect="sp:clientRelated" property="sp:clientName" display-label-id="clientName" />
+				<meta-data aspect="sp:clientRelated" property="sp:projectName" display-label-id="projectName" />
+			</custom-properties>
+		</advanced-search>
+	</config>
+	
 </alfresco-config>
