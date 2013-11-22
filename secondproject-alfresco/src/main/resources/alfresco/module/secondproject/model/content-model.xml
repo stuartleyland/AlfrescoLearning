@@ -72,16 +72,6 @@
 			<title>Whitepaper</title>
 			<parent>sp:marketingDoc</parent>
 		</type>	
-		<!-- <type name="sp:sampleType">
-			<title>Sample Type</title>
-			<parent>cm:content</parent>
-			<properties>
-				<property name="sp:sampleTypeProperty">
-					<title>Sample Type Property</title>
-					<type>d:text</type>
-				</property>
-			</properties>
-		</type> -->
 		<type name="sp:hrDoc">
 			<title>HR Document</title>
 			<parent>sp:doc</parent>
@@ -126,14 +116,5 @@
 				</property>
 			</properties>
 		</aspect>
-		<!-- <aspect name="sp:sampleAspect">
-			<title>Sample Aspect</title>
-			<properties>
-				<property name="sp:sampleAspectProperty">
-					<title>Sample Aspect Property</title>
-					<type>d:text</type>
-				</property>
-			</properties>
-		</aspect> -->
 	</aspects>
 </model>
