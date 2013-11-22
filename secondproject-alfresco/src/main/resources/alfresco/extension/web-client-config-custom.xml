@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alfresco-config>
+
+	<!-- Aspects -->
+	<config evaluator="aspect-name" condition="sp:webable">
+		<property-sheet>
+			<show-property name="sp:published" display-label-id="published" />
+		</property-sheet>
+	</config>
+	<config evaluator="aspect-name" condition="sp:clientRelated">
+		<property-sheet>
+			<show-property name="sp:clientName" display-label-id="clientName" />
+			<show-property name="sp:projectName" display-label-id="projectName" />
+		</property-sheet>
+	</config>
+	
+	<!-- Node types -->
+	<config evaluator="node-type" condition="sp:doc">
+		<property-sheet>
+			<show-association name="sp:relatedDocuments" />
+		</property-sheet>
+	</config>
+	<config evaluator="node-type" condition="sp:whitepaper">
+		<property-sheet>
+			<show-association name="sp:relatedDocuments" />
+		</property-sheet>
+	</config>
+	<config evaluator="node-type" condition="sp:marketingDoc">
+		<property-sheet>
+			<show-property name="sp:campaign" display-label-id="campaign" />
+		</property-sheet>
+	</config>
+</alfresco-config>
