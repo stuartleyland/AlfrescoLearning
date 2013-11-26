@@ -30,31 +30,31 @@
 		
 		<create-content>			
 			<content id="doc" label="sp.document.create.menu" type="pagelink" index="0">
-				<param name="page">create-content?destination={nodeRef}&amp;itemId=sp:doc&amp;mimeType=text/html&amp;titleId=sp.document.create.title</param>
+				<param name="page">create-content?destination={nodeRef}&amp;itemId=sp:doc&amp;mimeType=text/html</param>
 			</content>
 			
 			<content id="whitepaper" label="sp.whitepaper.create.menu" type="pagelink" index="1">
-				<param name="page">create-content?destination={nodeRef}&amp;itemId=sp:whitepaper&amp;mimeType=text/html&amp;titleId=sp.whitepaper.create.title</param>
+				<param name="page">create-content?destination={nodeRef}&amp;itemId=sp:whitepaper&amp;mimeType=text/html</param>
 			</content>
 			
 			<content id="legal-doc" label="sp.legalDoc.create.menu" type="pagelink" index="2">
-				<param name="page">create-content?destination={nodeRef}&amp;itemId=sp:legalDoc&amp;mimeType=text/html&amp;titleId=sp.legalDoc.create.title</param>
+				<param name="page">create-content?destination={nodeRef}&amp;itemId=sp:legalDoc&amp;mimeType=text/html</param>
 			</content>
 			
 			<content id="marketing-doc" label="sp.marketingDoc.create.menu" type="pagelink" index="3">
-				<param name="page">create-content?destination={nodeRef}&amp;itemId=sp:marketingDoc&amp;mimeType=text/html&amp;titleId=sp.marketingDoc.create.title</param>
+				<param name="page">create-content?destination={nodeRef}&amp;itemId=sp:marketingDoc&amp;mimeType=text/html</param>
 			</content>
 			
 			<content id="hr-doc" label="sp.hrDoc.create.menu" type="pagelink" index="4">
-				<param name="page">create-content?destination={nodeRef}&amp;itemId=sp:hrDoc&amp;mimeType=text/html&amp;titleId=sp.hrDoc.create.title</param>
+				<param name="page">create-content?destination={nodeRef}&amp;itemId=sp:hrDoc&amp;mimeType=text/html</param>
 			</content>
 			
 			<content id="sales-doc" label="sp.sales.create.menu" type="pagelink" index="5">
-				<param name="page">create-content?destination={nodeRef}&amp;itemId=sp:salesDoc&amp;mimeType=text/html&amp;titleId=sp.salesDoc.create.title</param>
+				<param name="page">create-content?destination={nodeRef}&amp;itemId=sp:salesDoc&amp;mimeType=text/html</param>
 			</content>
 			
 			<content id="ops-doc" label="sp.ops.create.menu" type="pagelink" index="6">
-				<param name="page">create-content?destination={nodeRef}&amp;itemId=sp:opsDoc&amp;mimeType=text/html&amp;titleId=sp.opsDoc.create.title</param>
+				<param name="page">create-content?destination={nodeRef}&amp;itemId=sp:opsDoc&amp;mimeType=text/html</param>
 			</content>
 		</create-content>
 		
