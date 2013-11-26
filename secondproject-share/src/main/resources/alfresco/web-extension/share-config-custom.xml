@@ -1,0 +1,42 @@
+<alfresco-config>
+	<config evaluator="string-compare" condition="DocumentLibrary">
+		<aspects>
+			<visible>
+				<aspect name="sp:webable" />
+				<aspect name="sp:clientRelated" />
+			</visible>
+			
+			<addable>
+			</addable>
+			
+			<removeable>
+			</removeable>
+		</aspects>
+		
+		<types>
+			<type name="cm:content">
+				<subtype name="sp:doc" />
+				<subtype name="sp:whitepaper" />
+				<subtype name="sp:legalDoc" />
+				<subtype name="sp:marketingDoc" />
+				<subtype name="sp:hrDoc" />
+				<subtype name="sp:salesDoc" />
+				<subtype name="sp:opsDoc" />
+			</type>
+			<type name="sp:doc">
+				<subtype name="sp:whitepaper" />
+			</type>
+		</types>
+		
+		<create-content>
+			<content id="doc" mimetype="text/plain" label="Document" itemid="sp:doc" index="0" />
+			<content id="whitepaper" mimetype="text/plain" label="Whitepaper" itemid="sp:whitepaper" index="1" />
+			<content id="legal-doc" mimetype="text/plain" label="Legal Document" itemid="sp:legalDoc" index="2" />
+			<content id="marketing-doc" mimetype="text/plain" label="Marketing Document" itemid="sp:marketingDoc" index="3" />
+			<content id="hr-doc" mimetype="text/plain" label="HR Document" itemid="sp:hrDoc" index="4" />
+			<content id="sales-doc" mimetype="text/plain" label="Sales Document" itemid="sp:salesDoc" index="5" />
+			<content id="ops-doc" mimetype="text/plain" label="Ops Document" itemid="sp:opsDoc" index="6" />
+		</create-content>
+		
+	</config>
+</alfresco-config>
