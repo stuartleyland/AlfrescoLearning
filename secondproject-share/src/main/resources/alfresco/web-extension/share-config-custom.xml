@@ -60,6 +60,7 @@
 		
 	</config>
 	
+	<!-- Existing nodes -->
 	<config evaluator="node-type" condition="sp:doc">
 		<forms>
 			<!-- Default form configuration for the cm:content type -->
@@ -1549,6 +1550,702 @@
 							<control-param name="editorAppearance">explorer</control-param>
 							<control-param name="forceEditor">true</control-param>
 						</control>
+					</field>
+				</appearance>
+			</form>
+		</forms>
+	</config>
+
+	<!-- New nodes -->
+	<config evaluator="model-type" condition="sp:doc">
+		<forms>
+			<!-- Default Create Content form -->
+			<form>
+				<field-visibility>
+					<show id="cm:name" />
+					<show id="cm:title" force="true" />
+					<show id="cm:description" force="true" />
+					<show id="cm:content" force="true" />
+					<show id="mimetype" />
+					<show id="app:editInline" force="true" />
+					<show id="sp:relatedDocuments" />
+				</field-visibility>
+				<appearance>
+					<field id="cm:name">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+					<field id="cm:title">
+						<control template="/org/alfresco/components/form/controls/textfield.ftl" />
+					</field>
+					<field id="cm:content">
+						<control>
+							<control-param name="editorAppearance">explorer</control-param>
+						</control>
+					</field>
+					<field id="mimetype">
+						<control template="/org/alfresco/components/form/controls/hidden.ftl">
+							<control-param name="contextProperty">mimeType</control-param>
+						</control>
+					</field>
+					<field id="app:editInline">
+						<control template="/org/alfresco/components/form/controls/hidden.ftl">
+							<control-param name="contextProperty">editInline</control-param>
+						</control>
+					</field>
+					<field id="sp:relatedDocuments" />
+				</appearance>
+			</form>
+			<!-- Document Library Create Google Doc form -->
+			<form id="doclib-create-googledoc">
+				<field-visibility>
+					<show id="cm:name" />
+					<show id="cm:title" force="true" />
+					<show id="cm:description" force="true" />
+					<show id="cm:content" force="true" />
+					<show id="mimetype" />
+					<show id="gd:googleEditable" force="true" />
+				</field-visibility>
+				<appearance>
+					<field id="cm:title">
+						<control template="/org/alfresco/components/form/controls/textfield.ftl" />
+					</field>
+					<field id="cm:content">
+						<control>
+							<control-param name="editorAppearance">none</control-param>
+							<control-param name="forceContent">true</control-param>
+						</control>
+					</field>
+					<field id="mimetype">
+						<control template="/org/alfresco/components/form/controls/hidden.ftl">
+							<control-param name="contextProperty">mimeType</control-param>
+						</control>
+					</field>
+					<field id="gd:googleEditable">
+						<control template="/org/alfresco/components/form/controls/hidden.ftl">
+							<control-param name="contextProperty">googleEditable</control-param>
+						</control>
+					</field>
+				</appearance>
+			</form>
+			<!-- Search form -->
+			<form id="search">
+				<field-visibility>
+					<show id="cm:name" />
+					<show id="cm:title" force="true" />
+					<show id="cm:description" force="true" />
+					<show id="mimetype" />
+					<show id="cm:modified" />
+					<show id="cm:modifier" />
+				</field-visibility>
+				<appearance>
+					<field id="mimetype">
+						<control template="/org/alfresco/components/form/controls/mimetype.ftl" />
+					</field>
+					<field id="cm:modifier">
+						<control>
+							<control-param name="forceEditable">true</control-param>
+						</control>
+					</field>
+					<field id="cm:modified">
+						<control template="/org/alfresco/components/form/controls/daterange.ftl" />
+					</field>
+				</appearance>
+			</form>
+		</forms>
+	</config>
+	
+	<config evaluator="model-type" condition="sp:marketingDoc">
+		<forms>
+			<!-- Default Create Content form -->
+			<form>
+				<field-visibility>
+					<show id="cm:name" />
+					<show id="cm:title" force="true" />
+					<show id="cm:description" force="true" />
+					<show id="cm:content" force="true" />
+					<show id="mimetype" />
+					<show id="app:editInline" force="true" />
+					<show id="sp:relatedDocuments" />
+					<show id="sp:campaign" />
+				</field-visibility>
+				<appearance>
+					<field id="cm:name">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+					<field id="cm:title">
+						<control template="/org/alfresco/components/form/controls/textfield.ftl" />
+					</field>
+					<field id="cm:content">
+						<control>
+							<control-param name="editorAppearance">explorer</control-param>
+						</control>
+					</field>
+					<field id="mimetype">
+						<control template="/org/alfresco/components/form/controls/hidden.ftl">
+							<control-param name="contextProperty">mimeType</control-param>
+						</control>
+					</field>
+					<field id="app:editInline">
+						<control template="/org/alfresco/components/form/controls/hidden.ftl">
+							<control-param name="contextProperty">editInline</control-param>
+						</control>
+					</field>
+					<field id="sp:relatedDocuments" />
+					<field id="sp:campaign" />
+				</appearance>
+			</form>
+			<!-- Document Library Create Google Doc form -->
+			<form id="doclib-create-googledoc">
+				<field-visibility>
+					<show id="cm:name" />
+					<show id="cm:title" force="true" />
+					<show id="cm:description" force="true" />
+					<show id="cm:content" force="true" />
+					<show id="mimetype" />
+					<show id="gd:googleEditable" force="true" />
+				</field-visibility>
+				<appearance>
+					<field id="cm:title">
+						<control template="/org/alfresco/components/form/controls/textfield.ftl" />
+					</field>
+					<field id="cm:content">
+						<control>
+							<control-param name="editorAppearance">none</control-param>
+							<control-param name="forceContent">true</control-param>
+						</control>
+					</field>
+					<field id="mimetype">
+						<control template="/org/alfresco/components/form/controls/hidden.ftl">
+							<control-param name="contextProperty">mimeType</control-param>
+						</control>
+					</field>
+					<field id="gd:googleEditable">
+						<control template="/org/alfresco/components/form/controls/hidden.ftl">
+							<control-param name="contextProperty">googleEditable</control-param>
+						</control>
+					</field>
+				</appearance>
+			</form>
+			<!-- Search form -->
+			<form id="search">
+				<field-visibility>
+					<show id="cm:name" />
+					<show id="cm:title" force="true" />
+					<show id="cm:description" force="true" />
+					<show id="mimetype" />
+					<show id="cm:modified" />
+					<show id="cm:modifier" />
+				</field-visibility>
+				<appearance>
+					<field id="mimetype">
+						<control template="/org/alfresco/components/form/controls/mimetype.ftl" />
+					</field>
+					<field id="cm:modifier">
+						<control>
+							<control-param name="forceEditable">true</control-param>
+						</control>
+					</field>
+					<field id="cm:modified">
+						<control template="/org/alfresco/components/form/controls/daterange.ftl" />
+					</field>
+				</appearance>
+			</form>
+		</forms>
+	</config>
+	
+	<config evaluator="model-type" condition="sp:whitepaper">
+		<forms>
+			<!-- Default Create Content form -->
+			<form>
+				<field-visibility>
+					<show id="cm:name" />
+					<show id="cm:title" force="true" />
+					<show id="cm:description" force="true" />
+					<show id="cm:content" force="true" />
+					<show id="mimetype" />
+					<show id="app:editInline" force="true" />
+					<show id="sp:relatedDocuments" />
+				</field-visibility>
+				<appearance>
+					<field id="cm:name">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+					<field id="cm:title">
+						<control template="/org/alfresco/components/form/controls/textfield.ftl" />
+					</field>
+					<field id="cm:content">
+						<control>
+							<control-param name="editorAppearance">explorer</control-param>
+						</control>
+					</field>
+					<field id="mimetype">
+						<control template="/org/alfresco/components/form/controls/hidden.ftl">
+							<control-param name="contextProperty">mimeType</control-param>
+						</control>
+					</field>
+					<field id="app:editInline">
+						<control template="/org/alfresco/components/form/controls/hidden.ftl">
+							<control-param name="contextProperty">editInline</control-param>
+						</control>
+					</field>
+					<field id="sp:relatedDocuments" />
+				</appearance>
+			</form>
+			<!-- Document Library Create Google Doc form -->
+			<form id="doclib-create-googledoc">
+				<field-visibility>
+					<show id="cm:name" />
+					<show id="cm:title" force="true" />
+					<show id="cm:description" force="true" />
+					<show id="cm:content" force="true" />
+					<show id="mimetype" />
+					<show id="gd:googleEditable" force="true" />
+				</field-visibility>
+				<appearance>
+					<field id="cm:title">
+						<control template="/org/alfresco/components/form/controls/textfield.ftl" />
+					</field>
+					<field id="cm:content">
+						<control>
+							<control-param name="editorAppearance">none</control-param>
+							<control-param name="forceContent">true</control-param>
+						</control>
+					</field>
+					<field id="mimetype">
+						<control template="/org/alfresco/components/form/controls/hidden.ftl">
+							<control-param name="contextProperty">mimeType</control-param>
+						</control>
+					</field>
+					<field id="gd:googleEditable">
+						<control template="/org/alfresco/components/form/controls/hidden.ftl">
+							<control-param name="contextProperty">googleEditable</control-param>
+						</control>
+					</field>
+				</appearance>
+			</form>
+			<!-- Search form -->
+			<form id="search">
+				<field-visibility>
+					<show id="cm:name" />
+					<show id="cm:title" force="true" />
+					<show id="cm:description" force="true" />
+					<show id="mimetype" />
+					<show id="cm:modified" />
+					<show id="cm:modifier" />
+				</field-visibility>
+				<appearance>
+					<field id="mimetype">
+						<control template="/org/alfresco/components/form/controls/mimetype.ftl" />
+					</field>
+					<field id="cm:modifier">
+						<control>
+							<control-param name="forceEditable">true</control-param>
+						</control>
+					</field>
+					<field id="cm:modified">
+						<control template="/org/alfresco/components/form/controls/daterange.ftl" />
+					</field>
+				</appearance>
+			</form>
+		</forms>
+	</config>
+	
+	<config evaluator="model-type" condition="sp:hrDoc">
+		<forms>
+			<!-- Default Create Content form -->
+			<form>
+				<field-visibility>
+					<show id="cm:name" />
+					<show id="cm:title" force="true" />
+					<show id="cm:description" force="true" />
+					<show id="cm:content" force="true" />
+					<show id="mimetype" />
+					<show id="app:editInline" force="true" />
+					<show id="sp:relatedDocuments" />
+				</field-visibility>
+				<appearance>
+					<field id="cm:name">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+					<field id="cm:title">
+						<control template="/org/alfresco/components/form/controls/textfield.ftl" />
+					</field>
+					<field id="cm:content">
+						<control>
+							<control-param name="editorAppearance">explorer</control-param>
+						</control>
+					</field>
+					<field id="mimetype">
+						<control template="/org/alfresco/components/form/controls/hidden.ftl">
+							<control-param name="contextProperty">mimeType</control-param>
+						</control>
+					</field>
+					<field id="app:editInline">
+						<control template="/org/alfresco/components/form/controls/hidden.ftl">
+							<control-param name="contextProperty">editInline</control-param>
+						</control>
+					</field>
+					<field id="sp:relatedDocuments" />
+				</appearance>
+			</form>
+			<!-- Document Library Create Google Doc form -->
+			<form id="doclib-create-googledoc">
+				<field-visibility>
+					<show id="cm:name" />
+					<show id="cm:title" force="true" />
+					<show id="cm:description" force="true" />
+					<show id="cm:content" force="true" />
+					<show id="mimetype" />
+					<show id="gd:googleEditable" force="true" />
+				</field-visibility>
+				<appearance>
+					<field id="cm:title">
+						<control template="/org/alfresco/components/form/controls/textfield.ftl" />
+					</field>
+					<field id="cm:content">
+						<control>
+							<control-param name="editorAppearance">none</control-param>
+							<control-param name="forceContent">true</control-param>
+						</control>
+					</field>
+					<field id="mimetype">
+						<control template="/org/alfresco/components/form/controls/hidden.ftl">
+							<control-param name="contextProperty">mimeType</control-param>
+						</control>
+					</field>
+					<field id="gd:googleEditable">
+						<control template="/org/alfresco/components/form/controls/hidden.ftl">
+							<control-param name="contextProperty">googleEditable</control-param>
+						</control>
+					</field>
+				</appearance>
+			</form>
+			<!-- Search form -->
+			<form id="search">
+				<field-visibility>
+					<show id="cm:name" />
+					<show id="cm:title" force="true" />
+					<show id="cm:description" force="true" />
+					<show id="mimetype" />
+					<show id="cm:modified" />
+					<show id="cm:modifier" />
+				</field-visibility>
+				<appearance>
+					<field id="mimetype">
+						<control template="/org/alfresco/components/form/controls/mimetype.ftl" />
+					</field>
+					<field id="cm:modifier">
+						<control>
+							<control-param name="forceEditable">true</control-param>
+						</control>
+					</field>
+					<field id="cm:modified">
+						<control template="/org/alfresco/components/form/controls/daterange.ftl" />
+					</field>
+				</appearance>
+			</form>
+		</forms>
+	</config>
+	
+	<config evaluator="model-type" condition="sp:salesDoc">
+		<forms>
+			<!-- Default Create Content form -->
+			<form>
+				<field-visibility>
+					<show id="cm:name" />
+					<show id="cm:title" force="true" />
+					<show id="cm:description" force="true" />
+					<show id="cm:content" force="true" />
+					<show id="mimetype" />
+					<show id="app:editInline" force="true" />
+					<show id="sp:relatedDocuments" />
+				</field-visibility>
+				<appearance>
+					<field id="cm:name">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+					<field id="cm:title">
+						<control template="/org/alfresco/components/form/controls/textfield.ftl" />
+					</field>
+					<field id="cm:content">
+						<control>
+							<control-param name="editorAppearance">explorer</control-param>
+						</control>
+					</field>
+					<field id="mimetype">
+						<control template="/org/alfresco/components/form/controls/hidden.ftl">
+							<control-param name="contextProperty">mimeType</control-param>
+						</control>
+					</field>
+					<field id="app:editInline">
+						<control template="/org/alfresco/components/form/controls/hidden.ftl">
+							<control-param name="contextProperty">editInline</control-param>
+						</control>
+					</field>
+					<field id="sp:relatedDocuments" />
+				</appearance>
+			</form>
+			<!-- Document Library Create Google Doc form -->
+			<form id="doclib-create-googledoc">
+				<field-visibility>
+					<show id="cm:name" />
+					<show id="cm:title" force="true" />
+					<show id="cm:description" force="true" />
+					<show id="cm:content" force="true" />
+					<show id="mimetype" />
+					<show id="gd:googleEditable" force="true" />
+				</field-visibility>
+				<appearance>
+					<field id="cm:title">
+						<control template="/org/alfresco/components/form/controls/textfield.ftl" />
+					</field>
+					<field id="cm:content">
+						<control>
+							<control-param name="editorAppearance">none</control-param>
+							<control-param name="forceContent">true</control-param>
+						</control>
+					</field>
+					<field id="mimetype">
+						<control template="/org/alfresco/components/form/controls/hidden.ftl">
+							<control-param name="contextProperty">mimeType</control-param>
+						</control>
+					</field>
+					<field id="gd:googleEditable">
+						<control template="/org/alfresco/components/form/controls/hidden.ftl">
+							<control-param name="contextProperty">googleEditable</control-param>
+						</control>
+					</field>
+				</appearance>
+			</form>
+			<!-- Search form -->
+			<form id="search">
+				<field-visibility>
+					<show id="cm:name" />
+					<show id="cm:title" force="true" />
+					<show id="cm:description" force="true" />
+					<show id="mimetype" />
+					<show id="cm:modified" />
+					<show id="cm:modifier" />
+				</field-visibility>
+				<appearance>
+					<field id="mimetype">
+						<control template="/org/alfresco/components/form/controls/mimetype.ftl" />
+					</field>
+					<field id="cm:modifier">
+						<control>
+							<control-param name="forceEditable">true</control-param>
+						</control>
+					</field>
+					<field id="cm:modified">
+						<control template="/org/alfresco/components/form/controls/daterange.ftl" />
+					</field>
+				</appearance>
+			</form>
+		</forms>
+	</config>
+	
+	<config evaluator="model-type" condition="sp:opsDoc">
+		<forms>
+			<!-- Default Create Content form -->
+			<form>
+				<field-visibility>
+					<show id="cm:name" />
+					<show id="cm:title" force="true" />
+					<show id="cm:description" force="true" />
+					<show id="cm:content" force="true" />
+					<show id="mimetype" />
+					<show id="app:editInline" force="true" />
+					<show id="sp:relatedDocuments" />
+				</field-visibility>
+				<appearance>
+					<field id="cm:name">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+					<field id="cm:title">
+						<control template="/org/alfresco/components/form/controls/textfield.ftl" />
+					</field>
+					<field id="cm:content">
+						<control>
+							<control-param name="editorAppearance">explorer</control-param>
+						</control>
+					</field>
+					<field id="mimetype">
+						<control template="/org/alfresco/components/form/controls/hidden.ftl">
+							<control-param name="contextProperty">mimeType</control-param>
+						</control>
+					</field>
+					<field id="app:editInline">
+						<control template="/org/alfresco/components/form/controls/hidden.ftl">
+							<control-param name="contextProperty">editInline</control-param>
+						</control>
+					</field>
+					<field id="sp:relatedDocuments" />
+				</appearance>
+			</form>
+			<!-- Document Library Create Google Doc form -->
+			<form id="doclib-create-googledoc">
+				<field-visibility>
+					<show id="cm:name" />
+					<show id="cm:title" force="true" />
+					<show id="cm:description" force="true" />
+					<show id="cm:content" force="true" />
+					<show id="mimetype" />
+					<show id="gd:googleEditable" force="true" />
+				</field-visibility>
+				<appearance>
+					<field id="cm:title">
+						<control template="/org/alfresco/components/form/controls/textfield.ftl" />
+					</field>
+					<field id="cm:content">
+						<control>
+							<control-param name="editorAppearance">none</control-param>
+							<control-param name="forceContent">true</control-param>
+						</control>
+					</field>
+					<field id="mimetype">
+						<control template="/org/alfresco/components/form/controls/hidden.ftl">
+							<control-param name="contextProperty">mimeType</control-param>
+						</control>
+					</field>
+					<field id="gd:googleEditable">
+						<control template="/org/alfresco/components/form/controls/hidden.ftl">
+							<control-param name="contextProperty">googleEditable</control-param>
+						</control>
+					</field>
+				</appearance>
+			</form>
+			<!-- Search form -->
+			<form id="search">
+				<field-visibility>
+					<show id="cm:name" />
+					<show id="cm:title" force="true" />
+					<show id="cm:description" force="true" />
+					<show id="mimetype" />
+					<show id="cm:modified" />
+					<show id="cm:modifier" />
+				</field-visibility>
+				<appearance>
+					<field id="mimetype">
+						<control template="/org/alfresco/components/form/controls/mimetype.ftl" />
+					</field>
+					<field id="cm:modifier">
+						<control>
+							<control-param name="forceEditable">true</control-param>
+						</control>
+					</field>
+					<field id="cm:modified">
+						<control template="/org/alfresco/components/form/controls/daterange.ftl" />
+					</field>
+				</appearance>
+			</form>
+		</forms>
+	</config>
+	
+	<config evaluator="model-type" condition="sp:legalDoc">
+		<forms>
+			<!-- Default Create Content form -->
+			<form>
+				<field-visibility>
+					<show id="cm:name" />
+					<show id="cm:title" force="true" />
+					<show id="cm:description" force="true" />
+					<show id="cm:content" force="true" />
+					<show id="mimetype" />
+					<show id="app:editInline" force="true" />
+					<show id="sp:relatedDocuments" />
+				</field-visibility>
+				<appearance>
+					<field id="cm:name">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+					<field id="cm:title">
+						<control template="/org/alfresco/components/form/controls/textfield.ftl" />
+					</field>
+					<field id="cm:content">
+						<control>
+							<control-param name="editorAppearance">explorer</control-param>
+						</control>
+					</field>
+					<field id="mimetype">
+						<control template="/org/alfresco/components/form/controls/hidden.ftl">
+							<control-param name="contextProperty">mimeType</control-param>
+						</control>
+					</field>
+					<field id="app:editInline">
+						<control template="/org/alfresco/components/form/controls/hidden.ftl">
+							<control-param name="contextProperty">editInline</control-param>
+						</control>
+					</field>
+					<field id="sp:relatedDocuments" />
+				</appearance>
+			</form>
+			<!-- Document Library Create Google Doc form -->
+			<form id="doclib-create-googledoc">
+				<field-visibility>
+					<show id="cm:name" />
+					<show id="cm:title" force="true" />
+					<show id="cm:description" force="true" />
+					<show id="cm:content" force="true" />
+					<show id="mimetype" />
+					<show id="gd:googleEditable" force="true" />
+				</field-visibility>
+				<appearance>
+					<field id="cm:title">
+						<control template="/org/alfresco/components/form/controls/textfield.ftl" />
+					</field>
+					<field id="cm:content">
+						<control>
+							<control-param name="editorAppearance">none</control-param>
+							<control-param name="forceContent">true</control-param>
+						</control>
+					</field>
+					<field id="mimetype">
+						<control template="/org/alfresco/components/form/controls/hidden.ftl">
+							<control-param name="contextProperty">mimeType</control-param>
+						</control>
+					</field>
+					<field id="gd:googleEditable">
+						<control template="/org/alfresco/components/form/controls/hidden.ftl">
+							<control-param name="contextProperty">googleEditable</control-param>
+						</control>
+					</field>
+				</appearance>
+			</form>
+			<!-- Search form -->
+			<form id="search">
+				<field-visibility>
+					<show id="cm:name" />
+					<show id="cm:title" force="true" />
+					<show id="cm:description" force="true" />
+					<show id="mimetype" />
+					<show id="cm:modified" />
+					<show id="cm:modifier" />
+				</field-visibility>
+				<appearance>
+					<field id="mimetype">
+						<control template="/org/alfresco/components/form/controls/mimetype.ftl" />
+					</field>
+					<field id="cm:modifier">
+						<control>
+							<control-param name="forceEditable">true</control-param>
+						</control>
+					</field>
+					<field id="cm:modified">
+						<control template="/org/alfresco/components/form/controls/daterange.ftl" />
 					</field>
 				</appearance>
 			</form>
