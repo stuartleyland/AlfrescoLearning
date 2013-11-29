@@ -11,7 +11,7 @@
 
     <groupId>com.ixxus.stu</groupId>
     <artifactId>secondproject</artifactId>
-    <version>4.1.5.1.0-SNAPSHOT</version>
+    <version>4.2.0.1.0-SNAPSHOT</version>
 
     <packaging>pom</packaging>
     <url>https://wiki.ixxus.co.uk</url>
@@ -23,7 +23,7 @@
     </scm>
 
     <properties>
-        <alfresco.version>4.2</alfresco.version>
+        <alfresco.version>4.2.0</alfresco.version>
         <alfresco.classifier>enterprise</alfresco.classifier>
         <ixxus.alfresco.version>4.2.0.0.0.1</ixxus.alfresco.version>
         <coverage.reports.dir>${basedir}/target/coverage-reports</coverage.reports.dir>

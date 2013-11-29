@@ -5,12 +5,12 @@
   <parent>
     <groupId>com.ixxus.stu</groupId>
     <artifactId>secondproject</artifactId>
-    <version>4.1.5.1.0-SNAPSHOT</version>
+    <version>4.2.0.1.0-SNAPSHOT</version>
   </parent>
   
   <groupId>com.ixxus.stu</groupId>
   <artifactId>second-project-share-main</artifactId>
-  <version>${alfresco.version}</version>
+
   <packaging>war</packaging>
   <name>second-project-share-main Maven Webapp</name>
   <url>http://maven.apache.org</url>
