@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>com.ixxus.stu</groupId>
 		<artifactId>secondproject</artifactId>
-		<version>4.1.5.1.0-SNAPSHOT</version>
+		<version>${alfresco.version}</version>
 	</parent>
 
 	<artifactId>secondproject-share</artifactId>
@@ -78,7 +78,7 @@
 		<dependency>
 			<groupId>com.ixxus.alfresco</groupId>
 			<artifactId>ixxus-share-sdk</artifactId>
-			<version>4.1.5.0.0.2</version>
+			<version>${ixxus.alfresco.version}</version>
 			<type>pom</type>
 			<scope>provided</scope>
 		</dependency>

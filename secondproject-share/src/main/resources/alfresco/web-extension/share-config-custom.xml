@@ -1638,6 +1638,7 @@
 					<show id="mimetype" />
 					<show id="cm:modified" />
 					<show id="cm:modifier" />
+					<show id="sp:clientRelated" />
 				</field-visibility>
 				<appearance>
 					<field id="mimetype">
@@ -1739,6 +1740,7 @@
 					<show id="mimetype" />
 					<show id="cm:modified" />
 					<show id="cm:modifier" />
+					<show id="sp:campaign" />
 				</field-visibility>
 				<appearance>
 					<field id="mimetype">
@@ -2251,7 +2253,7 @@
 			</form>
 		</forms>
 	</config>
-   
+
 	<config evaluator="aspect" condition="sp:webable">
 		<forms>
 			<form>
@@ -2260,14 +2262,14 @@
 					<show id="sp:isActive" />
 				</field-visibility>
 				<appearance>
-	   				<field id="sp:published" label-id="prop.sp_published" />
-	   				<field id="sp:isActive" label-id="prop.sp_isActive" />
-	   			</appearance>
+					<field id="sp:published" label-id="prop.sp_published" />
+					<field id="sp:isActive" label-id="prop.sp_isActive" />
+				</appearance>
 			</form>
 		</forms>
-   </config>
-   
-   <config evaluator="aspect" condition="sp:clientRelated">
+	</config>
+
+	<config evaluator="aspect" condition="sp:clientRelated">
 		<forms>
 			<form>
 				<field-visibility>
@@ -2275,11 +2277,33 @@
 					<show id="sp:projectName" />
 				</field-visibility>
 				<appearance>
-	   				<field id="sp:clientName" label-id="prop.sp_clientName" />
-	   				<field id="sp:projectName" label-id="prop.sp_projectName" />
-	   			</appearance>
+					<field id="sp:clientName" label-id="prop.sp_clientName" />
+					<field id="sp:projectName" label-id="prop.sp_projectName" />
+				</appearance>
+			</form>
+			<form id="search">
+				<field-visibility>
+					<show id="sp:clientName" />
+					<show id="sp:projectName" />
+				</field-visibility>
+				<appearance>
+					<field id="sp:clientName" label-id="prop.sp_clientName" />
+					<field id="sp:projectName" label-id="prop.sp_projectName" />
+				</appearance>
 			</form>
 		</forms>
-   </config>
+	</config>
+   
+	<config evaluator="string-compare" condition="AdvancedSearch" replace="true">
+		<advanced-search>
+			<forms>
+				<form labelId="search.form.label.cm_content" descriptionId="search.form.desc.cm_content">cm:content</form>
+				<form labelId="search.form.label.cm_folder" descriptionId="search.form.desc.cm_folder">cm:folder</form>
+				<form labelId="search.form.label.sp_doc" descriptionId="search.form.desc.sp_doc">sp:doc</form>
+				<form labelId="search.form.label.sp_marketingDoc" descriptionId="search.form.desc.sp_marketingDoc">sp:marketingDoc</form>
+			</forms>
+		</advanced-search>
+	</config>
+   
 	
 </alfresco-config>

@@ -7,23 +7,31 @@
     <artifactId>secondproject</artifactId>
     <version>4.1.5.1.0-SNAPSHOT</version>
   </parent>
+  
   <groupId>com.ixxus.stu</groupId>
   <artifactId>second-project-share-main</artifactId>
-  <version>4.1.5.1.0-SNAPSHOT</version>
+  <version>${alfresco.version}</version>
   <packaging>war</packaging>
   <name>second-project-share-main Maven Webapp</name>
   <url>http://maven.apache.org</url>
+  
   <dependencies>
 	<dependency>
 		<groupId>org.alfresco.enterprise</groupId>
 		<artifactId>share</artifactId>
-		<version>4.1.5</version>
+		<version>${alfresco.version}</version>
 		<type>war</type>
+		<exclusions>
+			<exclusion>
+				<groupId>org.alfresco</groupId>
+				<artifactId>alfresco-web-framework-commons</artifactId>
+			</exclusion>
+		</exclusions>
 	</dependency>
 	<dependency>
 		<groupId>com.ixxus.stu</groupId>
 		<artifactId>secondproject-share</artifactId>
-		<version>4.1.5.1.0-SNAPSHOT</version>
+		<version>${alfresco.version}</version>
 		<type>jar</type>
 	</dependency>
 	<dependency>
