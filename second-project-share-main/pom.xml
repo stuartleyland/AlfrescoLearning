@@ -20,12 +20,6 @@
 		<artifactId>share</artifactId>
 		<version>${alfresco.version}</version>
 		<type>war</type>
-		<exclusions>
-			<exclusion>
-				<groupId>org.alfresco</groupId>
-				<artifactId>alfresco-web-framework-commons</artifactId>
-			</exclusion>
-		</exclusions>
 	</dependency>
 	<dependency>
 		<groupId>com.ixxus.stu</groupId>
