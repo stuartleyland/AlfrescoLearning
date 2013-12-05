@@ -4,13 +4,16 @@
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
-        <dependent-module deploy-path="/" handle="module:/overlay/var/M2_REPO/org/alfresco/enterprise/share/4.2.0/share-4.2.0.war?unpackFolder=target/m2e-wtp/overlays&amp;includes=**/**&amp;excludes=META-INF/MANIFEST.MF">
+        <dependent-module archiveName="secondproject-share-4.2.0.1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/secondproject-share/secondproject-share">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/" handle="module:/overlay/var/M2_REPO/org/alfresco/share/4.2.0/share-4.2.0.war?unpackFolder=target/m2e-wtp/overlays&amp;includes=**/**&amp;excludes=META-INF/MANIFEST.MF">
             <dependency-type>consumes</dependency-type>
         </dependent-module>
         <dependent-module deploy-path="/" handle="module:/overlay/slf/?includes=**/**&amp;excludes=META-INF/MANIFEST.MF">
             <dependency-type>consumes</dependency-type>
         </dependent-module>
-        <property name="context-root" value="second-project-share-main"/>
         <property name="java-output-path" value="/second-project-share-main/target/classes"/>
+        <property name="context-root" value="share"/>
     </wb-module>
 </project-modules>

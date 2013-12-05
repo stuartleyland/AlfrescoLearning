@@ -20,7 +20,9 @@ public class AllFilesWebScript extends DeclarativeWebScript
 	{
 		Map<String, Object> webScriptResults = new HashMap<String, Object>();
 		StoreRef workspaceStore = StoreRef.STORE_REF_WORKSPACE_SPACESSTORE;
-		String query = "+PATH:\"/app:company_home//*\" +TYPE:\"cm:content\" -TYPE:\"cm:systemfolder\"";
+		
+//		String query = "+PATH:\"/app:company_home//*\" +TYPE:\"cm:content\" -TYPE:\"cm:systemfolder\"";
+		String query = "+PATH:\"/app:company_home//*\" +TYPE:\"cm:content\" -TYPE:\"cm:systemfolder\" +@cm\\:modified:2013-11-12";
 		
 		ResultSet results = null;
 		List<NodeRef> nodeRefResults = new ArrayList<NodeRef>();

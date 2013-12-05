@@ -8,7 +8,6 @@
     <version>4.2.0.1.0-SNAPSHOT</version>
   </parent>
   
-  <groupId>com.ixxus.stu</groupId>
   <artifactId>second-project-share-main</artifactId>
 
   <packaging>war</packaging>
